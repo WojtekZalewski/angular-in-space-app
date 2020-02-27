@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BomberShip, FighterShip, SpaceShip } from '../space-ship';
 import { Pilot } from '../pilot';
+import { PilotRoomComponent } from '../pilot-room/pilot-room.component';
 
 @Component({
   selector: 'app-hangar',
@@ -8,7 +9,9 @@ import { Pilot } from '../pilot';
   styleUrls: ['./hangar.component.css']
 })
 export class HangarComponent implements OnInit {
+  @ViewChild(PilotRoomComponent) pilotRoom: PilotRoomComponent;
   spaceShips: SpaceShip[] = [];
+  selectedPilot: Pilot = null;
 
   constructor() { }
 
@@ -17,4 +20,15 @@ export class HangarComponent implements OnInit {
     this.spaceShips.push(new BomberShip());
   }
 
+  assignPilot(spaceShip: SpaceShip): void {
+    spaceShip.pilot = this.selectedPilot;
+    this.pilotRoom.pilotLeave();
+  }
+
+  deassignPilot(spaceShip: SpaceShip): void {
+    this.pilotRoom.pilotReturn(spaceShip.pilot);
+    spaceShip.pilot = null;
+  }
+
 }
+

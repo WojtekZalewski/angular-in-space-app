@@ -1,4 +1,5 @@
 export class Pilot {
+  [x: string]: any;
   static defaultImageUrl = "/assets/unknown-pilot.png";
   firstName: string;
   lastName: string;
