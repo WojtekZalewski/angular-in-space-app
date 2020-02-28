@@ -1,0 +1,25 @@
+import { BomberShip } from "./bomber-ship";
+import { OrderFormValue } from "./order-form-value";
+import { Injectable } from "@angular/core";
+import { Observable, interval } from "rxjs";
+import { SpaceShipType } from "./space-ship-type.enum";
+import { SpaceShip, FighterShip } from "./space-ship";
+import { map, take } from 'rxjs/operators';
+
+@Injectable({
+  providedIn: "root"
+})
+export class SpaceShipService {
+  static shipProductionTime = 2000;
+
+  constructor() {}
+
+  produceShips(formValues: OrderFormValue): Observable<SpaceShip> {
+    const shipClass =
+      formValues.shipType === SpaceShipType.Fighter ? FighterShip : BomberShip;
+    return interval(SpaceShipService.shipProductionTime).pipe(
+      map(() => new shipClass()),
+      take(formValues.shipCount)
+    );
+  }
+}

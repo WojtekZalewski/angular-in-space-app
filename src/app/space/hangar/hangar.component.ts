@@ -16,8 +16,8 @@ export class HangarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.spaceShips.push(new FighterShip(new Pilot('Lee Adama', '/assets/adama.png')));
-    this.spaceShips.push(new BomberShip());
+    // this.spaceShips.push(new FighterShip(new Pilot('Lee Adama', '/assets/adama.png')));
+    // this.spaceShips.push(new BomberShip());
   }
 
   assignPilot(spaceShip: SpaceShip): void {
