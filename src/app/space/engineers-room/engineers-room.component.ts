@@ -37,7 +37,7 @@ export class EngineersRoomComponent implements OnInit {
       validators: [Validators.required, Validators.min(1), Validators.max(5)]
     })
   });
-  isProducing: false;
+  isProducing: boolean;
   shipProduced: any;
   shipCount = this.spaceShipService.hangarShips.pipe(
     map((ships) =>ships.length)
@@ -55,3 +55,4 @@ export class EngineersRoomComponent implements OnInit {
     });
   }
 }
+
