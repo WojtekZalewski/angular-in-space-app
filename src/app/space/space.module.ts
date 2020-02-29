@@ -8,6 +8,7 @@ import { PilotComponent } from './pilot/pilot.component';
 import { PilotRoomComponent } from './pilot-room/pilot-room.component';
 import { EngineersRoomComponent } from './engineers-room/engineers-room.component';
 import { SharedModule } from '../shared/shared.module';
+import { DestructionRoomComponent } from './destruction-room/destruction-room.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, EngineersRoomComponent],
+  declarations: [HangarComponent, SpaceShipComponent, PilotComponent, PilotRoomComponent, EngineersRoomComponent, DestructionRoomComponent],
   exports: [
     HangarComponent
   ]

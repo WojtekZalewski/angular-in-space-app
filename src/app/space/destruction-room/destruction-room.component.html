@@ -1,0 +1,12 @@
+<h1>Destruction Room</h1>
+<div class="control-group">
+  <label for="" class="control-label">Statek:</label>
+  <select name="" id="" [formControl]="shipIndexControl">
+    <option value="" *ngFor="let ship of spaceShips | async; index as i" [value]="i">
+      {{i+1}}. {{ship.modelName}}
+    </option>
+  </select>
+</div>
+<div class="control-group">
+  <button type="button" (click)="orderDestruction()">Utylizuj</button>
+</div>
