@@ -16,7 +16,7 @@
         "id": 3,
         "firstName": "Karl",
         "lastName": "Ahathon",
-        "imageUrl": null
+        "imageUrl": "/assets/unknown-pilot.png"
       }
     ]
   }
