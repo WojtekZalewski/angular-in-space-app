@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SpaceModule } from './space/space.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SpaceImageDirective } from './shared/space-image.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpaceImageDirective
   ],
   imports: [
     BrowserModule,
@@ -16,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [SpaceImageDirective]
 })
 export class AppModule { }
