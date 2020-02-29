@@ -10,10 +10,12 @@
 </div>
 
 <div class="property" [class.active]="spaceShip.activeShields">
+  {{spaceShip.activeShields | tickize}}
   SHIELDS
 </div>
 
 <div class="property" [class.active]="spaceShip.activeWeapons">
+  {{spaceShip.activeWeapons | tickize}}
   WEAPONS
 </div>
 
