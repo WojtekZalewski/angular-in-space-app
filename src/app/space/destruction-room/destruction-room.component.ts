@@ -10,7 +10,7 @@ import { FormControl } from '@angular/forms';
 export class DestructionRoomComponent implements OnInit {
   
   shipIndexControl = new FormControl(null);
-  spaceships = this.spaceShipService.hangarShips;
+  spaceShips = this.spaceShipService.hangarShips;
 
   constructor(private spaceShipService: SpaceShipService) { }
 

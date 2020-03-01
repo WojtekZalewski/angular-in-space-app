@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DestructionGuard } from './destruction.guard';
+import { PilotFormComponent } from './pilot-form/pilot-form.component';
+import { PilotResolver } from './pilot.resolver';
 
 const routes: Routes = [
   {
@@ -15,6 +17,11 @@ const routes: Routes = [
       {path: 'destruction', component: DestructionRoomComponent, canActivate: [DestructionGuard]},
       {path: '', redirectTo: 'production', pathMatch: 'full'}
     ]
+  },
+  {
+    path: 'space/pilots/:id',
+    component: PilotFormComponent,
+    resolve: { pilot: PilotResolver}
   }
 ];
 
