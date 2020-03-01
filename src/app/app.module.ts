@@ -7,14 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { SpaceImageDirective } from './shared/space-image.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { BlackHoleComponent } from './black-hole/black-hole.component';
-import { HttpClientMockComponent } from './testing/http-client-mock/http-client-mock.component';
+// import { HttpClientMockComponent } from './testing/http-client-mock/http-client-mock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SpaceImageDirective,
-    BlackHoleComponent,
-    HttpClientMockComponent
+    BlackHoleComponent
+    // HttpClientMockComponent
   ],
   imports: [
     BrowserModule,

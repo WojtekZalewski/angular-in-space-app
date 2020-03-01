@@ -6,6 +6,6 @@
   <button *ngIf="selectedPilot !==pilot else deselectButton" class="select-button"
     (click)="select(pilot)">Zaznacz</button>
   <ng-template #deselectButton>
-    <button class="deselectButton" (click)="select(null)">Odznacz</button>
+    <button class="deselectButton deselect-button" (click)="select(null)">Odznacz</button>
   </ng-template>
 </app-pilot>
