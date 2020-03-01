@@ -1,0 +1,10 @@
+<h1>Intel Browser</h1>
+<p>
+    Wybierz źródło danych wywiadowczych:
+    <select name="" id="" (change)="selectSource($event.target.value)">
+        <option value="">wybierz</option>
+        <option value="" *ngFor="let option of options" [value]="option.url">{{option.name}}</option>
+    </select>
+</p>
+
+<iframe [src]="source" *ngIf="source"></iframe>
