@@ -1,15 +1,14 @@
-import { environment } from './../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 import { Pilot, PilotAttrs } from './pilot';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PilotService {
-
   constructor(private http: HttpClient) { }
 
   getPilots(): Observable<Pilot[]> {
@@ -17,9 +16,30 @@ export class PilotService {
       map((data) => data.map((pilotAttrs) => new Pilot(pilotAttrs)))
     );
   }
-  getPilot (id: number) {
+
+  getPilot(id: number) {
     return this.http.get<PilotAttrs>(`${environment.apiUrl}/pilots/${id}`).pipe(
       map((pilotAttrs) => new Pilot(pilotAttrs))
-    ) ;
+    );
+  }
+
+  savePilot(pilotAttrs: PilotAttrs): Observable<Pilot> {
+    if (pilotAttrs.id) {
+      return this.updatePilot(pilotAttrs);
+    } else {
+      return this.createPilot(pilotAttrs);
+    }
+  }
+
+  private updatePilot(data: PilotAttrs): Observable<Pilot> {
+    return this.http.put(`${environment.apiUrl}/pilots/${data.id}`, data).pipe(
+      map((pilotAttrs) => new Pilot(pilotAttrs))
+    );
+  }
+
+  private createPilot(data: PilotAttrs): Observable<Pilot> {
+    return this.http.post(`${environment.apiUrl}/pilots`, data).pipe(
+      map((pilotAttrs) => new Pilot(pilotAttrs))
+    );
   }
 }

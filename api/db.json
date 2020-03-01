@@ -18,5 +18,16 @@
         "lastName": "Ahathon",
         "imageUrl": "/assets/unknown-pilot.png"
       }
+    ],
+    "forbidden-names": [
+      {
+        "name": "Maruda"
+      },
+      {
+        "name": "Ciamajda"
+      },
+      {
+        "name": "Gapcio"
+      }
     ]
   }

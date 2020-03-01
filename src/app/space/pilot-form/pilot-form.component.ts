@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
-import { map } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PilotAttrs } from '../pilot';
+import { filter, map, startWith, take } from 'rxjs/operators';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { PilotService } from '../pilot.service';
+import { PilotValidators } from '../pilot-validators';
 
 @Component({
   selector: 'app-pilot-form',
@@ -9,21 +12,36 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./pilot-form.component.css']
 })
 export class PilotFormComponent implements OnInit {
-
   form: FormGroup;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+              private pilotService: PilotService,
+              private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.data
-    .pipe(map((data) => data.pilot))
-    .subscribe((pilot) => {
-      this.form = new FormGroup({
-        id: new FormControl(pilot.id),
-        firstName: new FormControl(pilot.firstName),
-        lastName: new FormControl(pilot.lastName),
-        imageUrl: new FormControl(pilot.imageUrl)
+      .pipe(map((data) => data.pilot))
+      .subscribe((pilot) => {
+        this.form = new FormGroup({
+          id: new FormControl(pilot.id),
+          firstName: new FormControl(pilot.firstName, {
+            validators: [Validators.required, PilotValidators.pilotName]
+          }),
+          lastName: new FormControl(pilot.lastName, {
+            validators: [Validators.required],
+            asyncValidators: [PilotValidators.pilotForbidden],
+            updateOn: 'blur'
+          }),
+          imageUrl: new FormControl(pilot.imageUrl)
+        });
       });
-    });
+  }
+
+  save(): void {
+    const pilotAttrs = this.form.value;
+    this.pilotService.savePilot(pilotAttrs).subscribe(
+      () => this.router.navigate(['../..'], {relativeTo: this.route}),
+      () => alert('Nie udało się zapisać pilota!')
+    );
   }
 }
