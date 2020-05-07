@@ -1,9 +1,6 @@
 <h1>Engineers room</h1>
-
 <p>Aktualna liczba statków w Hangarze: {{shipCount | async}}</p>
-
 <form [formGroup]="form" (ngSubmit)="orderSpaceShips(form.value)">
-
   <div class="control-group">
     <label for="" class="control-label">Typ:</label>
     <label for="" *ngFor="let spaceShipType of spaceShipTypes">
@@ -11,7 +8,6 @@
       {{ spaceShipType.label  }}
     </label>
   </div>
-
   <div class="control-group">
     <label for="" class="control-label">Ilość:</label>
     <input type="number" formControlName="shipCount" />
@@ -19,7 +15,6 @@
     <span *ngIf="form.get('shipCount').hasError('min') || form.get('shipCount').hasError('max')" class="error">Podaj
       liczbę z zakresu 1 - 5</span>
   </div>
-
   <div class="control-group">
     <button type="submit" [disabled]="form.invalid || isProducing">Produkuj</button>
     <p *ngIf="isProducing">Trwa produkcja ...</p>

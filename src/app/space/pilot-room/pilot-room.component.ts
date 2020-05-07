@@ -14,8 +14,6 @@ export class PilotRoomComponent implements OnInit {
   constructor(private pilotService: PilotService) { }
 
   ngOnInit() {
-    // this.pilots.push(new Pilot('Sharon Valerii', '/assets/valerii.png'));
-    // this.pilots.push(new Pilot('Karl Agathon', '/assets/adama.png'));
     this.pilotService.getPilots().subscribe({
       next: (pilots) => this.pilots = pilots,
       error: () => alert('Nie udało się pobrać pilotów')
@@ -36,5 +34,4 @@ export class PilotRoomComponent implements OnInit {
   pilotReturn(pilot: Pilot): void {
     this.pilots.push(pilot);
   }
-
 }

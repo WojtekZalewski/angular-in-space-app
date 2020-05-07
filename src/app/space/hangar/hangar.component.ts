@@ -11,16 +11,12 @@ import { SpaceShipService } from '../space-ship.service';
 })
 export class HangarComponent implements OnInit {
   @ViewChild(PilotRoomComponent) pilotRoom: PilotRoomComponent;
-  // spaceShips: SpaceShip[] = [];
   selectedPilot: Pilot = null;
-
   spaceShips = this.spaceShipService.hangarShips;
 
   constructor(private spaceShipService: SpaceShipService) { }
 
   ngOnInit() {
-    // this.spaceShips.push(new FighterShip(new Pilot('Lee Adama', '/assets/adama.png')));
-    // this.spaceShips.push(new BomberShip());
   }
 
   assignPilot(spaceShip: SpaceShip): void {
@@ -34,4 +30,3 @@ export class HangarComponent implements OnInit {
   }
 
 }
-

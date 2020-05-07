@@ -14,33 +14,30 @@ interface ShipType {
 @Component({
   selector: "app-engineers-room",
   templateUrl: "./engineers-room.component.html",
-  styleUrls: ["./engineers-room.component.css"]
+  styleUrls: ["./engineers-room.component.css"],
 })
 export class EngineersRoomComponent implements OnInit {
-
-  // x@Output() shipProduced = new EventEmitter<SpaceShip>();
-
   shipsCount = this.spaceShipService.hangarShips.pipe(
     map((ships) => ships.length)
   );
 
   spaceShipTypes: ShipType[] = [
     { label: "Myśliwiec", value: SpaceShipType.Fighter },
-    { label: "Bombowiec", value: SpaceShipType.Bomber }
+    { label: "Bombowiec", value: SpaceShipType.Bomber },
   ];
 
   form = new FormGroup({
     shipType: new FormControl(SpaceShipType.Fighter, {
-      validators: [Validators.required]
+      validators: [Validators.required],
     }),
     shipCount: new FormControl(1, {
-      validators: [Validators.required, Validators.min(1), Validators.max(5)]
-    })
+      validators: [Validators.required, Validators.min(1), Validators.max(5)],
+    }),
   });
   isProducing: boolean;
   shipProduced: any;
   shipCount = this.spaceShipService.hangarShips.pipe(
-    map((ships) =>ships.length)
+    map((ships) => ships.length)
   );
 
   constructor(private spaceShipService: SpaceShipService) {}
@@ -50,9 +47,7 @@ export class EngineersRoomComponent implements OnInit {
   orderSpaceShips(formValues: OrderFormValue) {
     this.isProducing = true;
     this.spaceShipService.produceShips(formValues).subscribe({
-      // next: ship => this.shipProduced.emit(ship),
-      complete: () => (this.isProducing = false)
+      complete: () => (this.isProducing = false),
     });
   }
 }
-

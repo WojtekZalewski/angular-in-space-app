@@ -17,5 +17,4 @@ export class PilotResolver implements Resolve<Pilot> {
       return this.pilotService.getPilot(route.params.id);
     }
   }
-
 }
