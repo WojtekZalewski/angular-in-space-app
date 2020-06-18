@@ -15,7 +15,7 @@ Window alert:
 "Nie udało się pobrać pilotów."
 </br>
 For display pilot's files:
-</br>
+</br></br>
 During `ng serve`, in new window, run `npm run api.
 
 ## Code scaffolding
