@@ -9,7 +9,14 @@ Updated to version 9.1.4.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Pilot's files
-Run `npm run api` for display pilot's files.
+
+Window alert: 
+</br>
+"Nie udało się pobrać pilotów."
+</br>
+For display pilot's files:
+</br></br>
+During `ng serve`, in new window, run `npm run api.
 
 ## Code scaffolding
 
