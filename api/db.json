@@ -15,20 +15,8 @@
     {
       "id": 3,
       "firstName": "Karl",
-      "lastName": "Ahathon",
+      "lastName": "Agathon",
       "imageUrl": "/assets/unknown-pilot.png"
-    },
-    {
-      "id": 4,
-      "firstName": "Marlena",
-      "lastName": "Beczek",
-      "imageUrl": "/assets/unknown-pilot.png"
-    },
-    {
-      "id": 5,
-      "firstName": "Magdalena",
-      "lastName": "Buza",
-      "imageUrl": "/assets/adama.png"
     }
   ],
   "forbidden-names": [
