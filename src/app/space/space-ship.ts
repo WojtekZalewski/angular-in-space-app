@@ -17,12 +17,12 @@ export abstract class SpaceShip {
 
 export class FighterShip extends SpaceShip {
   constructor(pilot?: Pilot) {
-    super('Viper', '/assets/viper.png', pilot);
+    super('X-wing', '/assets/xwing.png', pilot);
   }
 }
 
 export class BomberShip extends SpaceShip {
   constructor(pilot?: Pilot) {
-    super('Raptor', '/assets/raptor.png', pilot);
+    super('Bomber', '/assets/bomber.ico', pilot);
   }
 }
