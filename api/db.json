@@ -2,12 +2,18 @@
   "pilots": [
     {
       "id": 1,
+      "firstName": "Luke",
+      "lastName": "Skywalker",
+      "imageUrl": "/assets/skywalker.jpg"
+    },
+    {
+      "id": 2,
       "firstName": "Han",
       "lastName": "Solo",
       "imageUrl": "/assets/solo.jpg"
     },
     {
-      "id": 2,
+      "id": 1,
       "firstName": "Luke",
       "lastName": "Skywalker",
       "imageUrl": "/assets/skywalker.jpg"
