@@ -24,6 +24,7 @@ export class EngineersRoomComponent implements OnInit {
   spaceShipTypes: ShipType[] = [
     { label: "Myśliwiec", value: SpaceShipType.Fighter },
     { label: "Bombowiec", value: SpaceShipType.Bomber },
+    { label: "Sokół Millennium", value: SpaceShipType.Falcon }
   ];
 
   form = new FormGroup({

@@ -1,4 +1,5 @@
 export enum SpaceShipType {
     Fighter,
-    Bomber
+    Bomber,
+    Falcon
 }
