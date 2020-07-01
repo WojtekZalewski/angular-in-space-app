@@ -2,32 +2,56 @@
   "pilots": [
     {
       "id": 1,
-      "firstName": "Lee",
-      "lastName": "Adama",
-      "imageUrl": "/assets/adama.png"
+      "firstName": "Han",
+      "lastName": "Solo",
+      "imageUrl": "/assets/solo.jpg"
     },
     {
       "id": 2,
-      "firstName": "Sharon",
-      "lastName": "Valerii",
-      "imageUrl": "/assets/valerii.png"
+      "firstName": "Luke",
+      "lastName": "Skywalker",
+      "imageUrl": "/assets/skywalker.jpg"
     },
     {
       "id": 3,
-      "firstName": "Karl",
-      "lastName": "Agathon",
-      "imageUrl": "/assets/unknown-pilot.png"
+      "firstName": "Darth",
+      "lastName": "Vader",
+      "imageUrl": "/assets/vader.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "Boba",
+      "lastName": "Fett",
+      "imageUrl": "assets/bobafett.png"
+    },
+    {
+      "id": 5,
+      "firstName": "Lando",
+      "lastName": "Calrissian",
+      "imageUrl": "assets/lando.png"
+    },
+    {
+      "id": 6,
+      "firstName": "Chewbacca",
+      "lastName": "",
+      "imageUrl": "assets/chewbacca.ico"
+    },
+    {
+      "id": 7,
+      "firstName": "Anakin",
+      "lastName": "Skywalker",
+      "imageUrl": "assets/anakin.png"
     }
   ],
   "forbidden-names": [
     {
-      "name": "Maruda"
+      "name": "Leia"
     },
     {
-      "name": "Ciamajda"
+      "name": "Yoda"
     },
     {
-      "name": "Gapcio"
+      "name": "Palpatine"
     }
   ]
 }
