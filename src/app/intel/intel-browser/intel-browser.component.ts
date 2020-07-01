@@ -10,8 +10,8 @@ export class IntelBrowserComponent implements OnInit {
   source: SafeResourceUrl = null;
   
   options = [
-    {name: 'ESA', url: 'http://www.esa.int/ESA'},
-    {name: 'POLSA', url: 'https://www.polsa.gov.pl/pl'}
+    {name: 'Official site', url: 'https://www.starwars.com/'},
+    {name: 'Fandom', url: 'https://starwars.fandom.com'}
   ];
 
   selectSource(value: string) {
