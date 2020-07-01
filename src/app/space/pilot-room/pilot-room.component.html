@@ -4,7 +4,7 @@
     Edytuj
   </button>
   <button *ngIf="selectedPilot !==pilot else deselectButton" class="select-button"
-    (click)="select(pilot)">Zaznacz</button>
+    (click)="select(pilot)">Wybierz</button>
   <ng-template #deselectButton>
     <button class="deselectButton deselect-button" (click)="select(null)">Odznacz</button>
   </ng-template>
