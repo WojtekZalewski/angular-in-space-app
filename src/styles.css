@@ -1,5 +1,8 @@
 body {
-    color: #fff;
-    font-family: Helvetica, sans-serif;
-    background-image: url('assets/cosmos.jpg');
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  background-image: url('assets/deathstar.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
