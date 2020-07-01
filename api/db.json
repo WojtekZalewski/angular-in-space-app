@@ -13,12 +13,6 @@
       "imageUrl": "/assets/solo.jpg"
     },
     {
-      "id": 1,
-      "firstName": "Luke",
-      "lastName": "Skywalker",
-      "imageUrl": "/assets/skywalker.jpg"
-    },
-    {
       "id": 3,
       "firstName": "Darth",
       "lastName": "Vader",
