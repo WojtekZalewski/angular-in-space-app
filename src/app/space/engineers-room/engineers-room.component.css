@@ -3,7 +3,7 @@
 }
 .control-label {
     display: inline-block;
-    width: 100px;
+    width: 50px;
 }
 .control-group {
     margin: 12px 0;
@@ -13,7 +13,11 @@
 }
 label {
     cursor: pointer;
+    height: 30px;
 }
 h1,p,form {
     margin-left: 25px;
+}
+form {
+    width: 60%;
 }
