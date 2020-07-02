@@ -27,7 +27,7 @@ export class EngineersRoomComponent implements OnInit {
     { label: "Bomber", value: SpaceShipType.Bomber },
     { label: "Lambda", value: SpaceShipType.Lambda },
     { label: "Slave I", value: SpaceShipType.Slave },
-    { label: "Millennium falcon", value: SpaceShipType.Falcon },
+    { label: "Millennium Falcon", value: SpaceShipType.Falcon },
     { label: "Landspeeder", value: SpaceShipType.Landspeeder }
   ];
 

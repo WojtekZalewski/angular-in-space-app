@@ -47,7 +47,7 @@ export class SlaveShip extends SpaceShip {
 
 export class FalconShip extends SpaceShip {
   constructor(pilot?: Pilot) {
-    super('Sokół Millennium', '/assets/falcon.png', pilot);
+    super('Millennium Falcon', '/assets/falcon.png', pilot);
   }
 }
 

@@ -3,6 +3,6 @@ import { Pilot } from "./pilot";
 
 export class FalconShip extends SpaceShip{
     constructor(pilot?: Pilot) {
-        super('Sokół Millennium','/assets/falcon.jpg', pilot);
+        super('Millennium Falcon','/assets/falcon.jpg', pilot);
     }
 }
