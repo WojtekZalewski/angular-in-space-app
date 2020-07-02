@@ -29,6 +29,6 @@ export class BomberShip extends SpaceShip {
 
 export class FalconShip extends SpaceShip {
   constructor(pilot?: Pilot) {
-    super('SoŻoł', '/assets/', pilot);
+    super('Sokół Millennium', '/assets/falcon.png', pilot);
   }
 }
