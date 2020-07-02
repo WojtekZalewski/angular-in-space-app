@@ -5,12 +5,14 @@ body {
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
-    color: yellow;
+  color: yellow;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
