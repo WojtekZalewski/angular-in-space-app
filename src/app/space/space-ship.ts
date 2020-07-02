@@ -21,6 +21,12 @@ export class FighterShip extends SpaceShip {
   }
 }
 
+export class TieShip extends SpaceShip{
+  constructor(pilot?: Pilot) {
+      super('Tie fighter','/assets/tie.png', pilot);
+  }
+}
+
 export class BomberShip extends SpaceShip {
   constructor(pilot?: Pilot) {
     super('Bomber', '/assets/bomber.ico', pilot);

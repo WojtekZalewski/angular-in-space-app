@@ -2,7 +2,7 @@ import { OrderFormValue } from "./order-form-value";
 import { Injectable } from "@angular/core";
 import { Observable, interval, BehaviorSubject } from "rxjs";
 import { SpaceShipType } from "./space-ship-type.enum";
-import { SpaceShip, FighterShip, BomberShip, FalconShip } from "./space-ship";
+import { SpaceShip, TieShip, FighterShip, BomberShip, FalconShip } from "./space-ship";
 import { map, take, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class SpaceShipService {
 
   produceShips(formValues: OrderFormValue): Observable<SpaceShip> {
     const shipClass =
-      formValues.shipType === SpaceShipType.Fighter ? FighterShip : BomberShip;
+      formValues.shipType === SpaceShipType.Fighter ? FighterShip : TieShip;
     return interval(SpaceShipService.shipProductionTime).pipe(
       map(() => new shipClass()),
       take(formValues.shipCount),

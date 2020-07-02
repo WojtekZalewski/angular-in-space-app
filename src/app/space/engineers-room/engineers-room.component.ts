@@ -22,8 +22,9 @@ export class EngineersRoomComponent implements OnInit {
   );
 
   spaceShipTypes: ShipType[] = [
-    { label: "Myśliwiec", value: SpaceShipType.Fighter },
-    { label: "Bombowiec", value: SpaceShipType.Bomber },
+    { label: "X-wing", value: SpaceShipType.Fighter },
+    { label: "Tie", value: SpaceShipType.Tie },
+    { label: "Bomber", value: SpaceShipType.Bomber },
     { label: "Sokół Millennium", value: SpaceShipType.Falcon }
   ];
 
