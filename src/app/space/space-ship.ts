@@ -41,7 +41,7 @@ export class LambdaShip extends SpaceShip {
 
 export class SlaveShip extends SpaceShip {
   constructor(pilot?: Pilot) {
-    super('Slave I', '/assets/slaveI.jpeg', pilot);
+    super('Slave I', '/assets/slave.jpg', pilot);
   }
 }
 
