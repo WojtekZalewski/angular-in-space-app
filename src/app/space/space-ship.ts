@@ -33,8 +33,32 @@ export class BomberShip extends SpaceShip {
   }
 }
 
+export class LambdaShip extends SpaceShip {
+  constructor(pilot?: Pilot) {
+    super('Lambda', '/assets/lambda.png', pilot);
+  }
+}
+
+export class SlaveShip extends SpaceShip {
+  constructor(pilot?: Pilot) {
+    super('Slave I', '/assets/slaveI.jpeg', pilot);
+  }
+}
+
 export class FalconShip extends SpaceShip {
   constructor(pilot?: Pilot) {
     super('Sokół Millennium', '/assets/falcon.png', pilot);
+  }
+}
+
+export class NewFighterShip extends SpaceShip {
+  constructor(pilot?: Pilot) {
+    super('Myśliwiec', '/assets/fighter.jpg', pilot);
+  }
+}
+
+export class LandspeederShip extends SpaceShip {
+  constructor(pilot?: Pilot) {
+    super('Landspeeder', '/assets/landspeeder.jpg', pilot);
   }
 }
