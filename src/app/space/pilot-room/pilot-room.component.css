@@ -1,3 +1,6 @@
 app-pilot.selected {
   background-color: #ffff0045;
 }
+.edit-button {
+  margin: 5px auto 1px auto;
+}
