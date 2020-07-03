@@ -3,8 +3,6 @@ export enum SpaceShipType {
     Tie,
     Bomber,
     Lambda,
-    Slave,
     Falcon,
     NewFighter,
-    Landspeeder
 }

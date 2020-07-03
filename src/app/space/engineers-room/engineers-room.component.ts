@@ -26,9 +26,7 @@ export class EngineersRoomComponent implements OnInit {
     { label: "Tie Fighter", value: SpaceShipType.Tie },
     { label: "Bomber", value: SpaceShipType.Bomber },
     { label: "Lambda", value: SpaceShipType.Lambda },
-    { label: "Slave I", value: SpaceShipType.Slave },
-    { label: "Millennium Falcon", value: SpaceShipType.Falcon },
-    { label: "Landspeeder", value: SpaceShipType.Landspeeder }
+    { label: "Millennium Falcon", value: SpaceShipType.Falcon }
   ];
 
   form = new FormGroup({

@@ -39,26 +39,8 @@ export class LambdaShip extends SpaceShip {
   }
 }
 
-export class SlaveShip extends SpaceShip {
-  constructor(pilot?: Pilot) {
-    super('Slave I', '/assets/slave.jpg', pilot);
-  }
-}
-
 export class FalconShip extends SpaceShip {
   constructor(pilot?: Pilot) {
     super('Millennium Falcon', '/assets/falcon.png', pilot);
-  }
-}
-
-export class NewFighterShip extends SpaceShip {
-  constructor(pilot?: Pilot) {
-    super('Myśliwiec', '/assets/fighter.jpg', pilot);
-  }
-}
-
-export class LandspeederShip extends SpaceShip {
-  constructor(pilot?: Pilot) {
-    super('Landspeeder', '/assets/landspeeder.jpg', pilot);
   }
 }
