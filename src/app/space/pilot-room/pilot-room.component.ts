@@ -16,7 +16,7 @@ export class PilotRoomComponent implements OnInit {
   ngOnInit() {
     this.pilotService.getPilots().subscribe({
       next: (pilots) => this.pilots = pilots,
-      error: () => alert('Nie udało się pobrać akt pilotów.')
+      error: () => alert('Nie udało się pobrać akt pilotów')
     });
   }
 
