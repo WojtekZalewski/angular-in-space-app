@@ -13,11 +13,11 @@
 }
 label {
     cursor: pointer;
-    height: 30px;
+    height: 20px;
 }
 h1,p,form {
     margin-left: 25px;
 }
-form {
-    width: 60%;
+.control-group > label {
+    margin: 5px auto;
 }

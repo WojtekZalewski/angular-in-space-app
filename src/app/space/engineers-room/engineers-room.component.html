@@ -3,9 +3,10 @@
 <form [formGroup]="form" (ngSubmit)="orderSpaceShips(form.value)">
   <div class="control-group">
     <label for="" class="control-label">Typ:</label>
+    <br/>
     <label for="" *ngFor="let spaceShipType of spaceShipTypes">
       <input type="radio" formControlName="shipType" [value]="spaceShipType.value" />
-      {{ spaceShipType.label  }}
+      {{ spaceShipType.label  }} <br/>
     </label>
   </div>
   <div class="control-group">
