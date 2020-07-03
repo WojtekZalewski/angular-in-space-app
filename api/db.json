@@ -35,12 +35,6 @@
       "firstName": "Chewbacca",
       "lastName": " ",
       "imageUrl": "assets/chewbacca.ico"
-    },
-    {
-      "id": 7,
-      "firstName": "Anakin",
-      "lastName": "Skywalker",
-      "imageUrl": "assets/anakin.png"
     }
   ],
   "forbidden-names": [
