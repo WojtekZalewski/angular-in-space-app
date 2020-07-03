@@ -1,24 +1,27 @@
 :host {
-    display: block;
-    background-image: url('/assets/star-wars.jpg');
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    width: 100%;
+  display: block;
+  background-image: url('/assets/star-wars-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 .link-wrapper {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
-    width: 150px;
-    height: 38px;
-    background: crimson;
-    border: none;
-    color: white;
-    font-size: 14px;
+  width: 150px;
+  height: 38px;
+  background: crimson;
+  border: none;
+  color: white;
+  font-size: 14px;
 }
