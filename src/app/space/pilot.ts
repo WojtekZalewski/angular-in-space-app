@@ -6,7 +6,7 @@ export interface PilotAttrs {
 }
 
 export class Pilot {
-  static defaultImageUrl = "/assets/unknown-pilot.png";
+  static defaultImageUrl = "/assets/unknownpilot.png";
   id: number;
   firstName: string;
   lastName: string;
